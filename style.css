@@ -25,7 +25,6 @@
     width: 900px;
     border: 2px solid lightseagreen;
     background-color: pink;
-    margin-top: 30px;
     border-radius: 10px;
     display: flex;
     justify-content: flex-start;
@@ -35,8 +34,95 @@
     height: 50px;
     width: 80px;
     font-size: 24px;
-    margin: 30px;
     border-radius: 10px;
     line-height: 50px;
     margin-left: 5px;
+}
+.containerss{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap:10px;
+}
+.containerss div{
+    background-color: rgb(240, 182, 201);
+    font-size: 1.5rem;
+}
+.header{
+    grid-column: 1 / span 12;
+}
+.sidebar{
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 10;
+}
+.navigation{
+    grid-column: 4 / span 6;
+}
+.ads{
+    grid-column: 10 / span 3;
+    grid-row: 2 / span 10;
+}
+.main{
+    grid-column: 4 / span 6;
+    grid-row: 3 / span 9;
+}
+.footer{
+    grid-column: 1 / span 12;
+}
+
+
+
+@media (max-width:720px) {
+    .header{ 
+        grid-column: 1 / span 12;
+    }
+
+    .navigation{
+        grid-column: 1 / span 12;
+        grid-row: 2;
+    }
+
+
+    .sidebar{
+        grid-column: 1 / span 3;
+        grid-row: 3 / span 9;
+    }
+
+
+    .main{
+        grid-column: 4 / span 9;
+        grid-row: 3 / span 9;
+    }
+
+
+    .ads{
+        grid-column: 1 / span 3;
+        grid-row: 12;
+    }
+
+
+    .footer{
+        grid-row: 12;
+        grid-column: 4 / span 9;
+    }
+}
+
+.loader{
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    animation:  spin 2s liner infinite;
+}
+
+@keyframes spin{
+    0% {
+transform: rotate(0deg);
+    }
+100%{
+    transform: rotate(360deg);
+}
 }
